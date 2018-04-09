@@ -17,6 +17,7 @@ namespace Idler.Models
 
         public EElement Element { get; private set; }
         public EHeroProperty HeroProperty { get; private set; }
+        public bool IsEquiped { get; set; }
 
         protected Item(string name, string description, float startingBoost, float boostMultiplier, float startingCost, float costMultiplier, EElement eElement, EHeroProperty eHeroProperty)
         {

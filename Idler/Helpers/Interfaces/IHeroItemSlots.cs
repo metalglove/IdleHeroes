@@ -1,4 +1,6 @@
-﻿using Idler.Models.Items;
+﻿using Idler.Models;
+using Idler.Models.Wear;
+using System;
 
 namespace Idler.Helpers.Interfaces
 {
