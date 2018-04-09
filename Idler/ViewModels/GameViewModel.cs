@@ -9,5 +9,9 @@ namespace Idler.ViewModels
 {
     public class GameViewModel : ViewModelBase
     {
+        public GameViewModel()
+        {
+
+        }
     }
 }

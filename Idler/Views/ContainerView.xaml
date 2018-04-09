@@ -4,9 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Idler.Views"
+        DataContext="{DynamicResource ContainerViewModel}"
         mc:Ignorable="d"
-        Title="ContainerView" Height="450" Width="800">
+        Title="ContainerView">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ContentControl Grid.Row="0" Content="{Binding GameViewModel, UpdateSourceTrigger=PropertyChanged}"/>
+        <ContentControl Grid.Row="1" Content="{Binding ActiveViewModel, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Window>

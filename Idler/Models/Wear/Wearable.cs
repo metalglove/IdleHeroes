@@ -14,7 +14,7 @@ namespace Idler.Models.Wear
 
         public bool TryEquip(Item item)
         {
-            if (Wearables.IsItemWearableFor(this, item))
+            if (Wearables.IsItemWearableFor(this, item) && Item != null)
             {
                 Inventory.Items.Single(itemInInventory => itemInInventory == item).IsEquiped = true;
                 Item = item;
