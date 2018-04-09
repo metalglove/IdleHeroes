@@ -54,18 +54,42 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="Helpers\Elemental.cs" />
+    <Compile Include="Helpers\Enumerations\EElement.cs" />
+    <Compile Include="Helpers\Enumerations\EHeroProperty.cs" />
+    <Compile Include="Helpers\Interfaces\IDescribe.cs" />
+    <Compile Include="Helpers\Interfaces\IHeroItemSlots.cs" />
+    <Compile Include="Helpers\Interfaces\IUpgradable.cs" />
+    <Compile Include="Helpers\NotifyPropertyChanged.cs" />
+    <Compile Include="Helpers\ViewModelBase.cs" />
+    <Compile Include="Models\Hero.cs" />
+    <Compile Include="Models\HeroModel.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemModel.cs" />
+    <Compile Include="Models\Items\Bodywear.cs" />
+    <Compile Include="Models\Items\Fingerwear.cs" />
+    <Compile Include="Models\Items\Footwear.cs" />
+    <Compile Include="Models\Items\Handwear.cs" />
+    <Compile Include="Models\Items\Headwear.cs" />
+    <Compile Include="Models\Items\Legwear.cs" />
+    <Compile Include="Models\Items\Neckwear.cs" />
+    <Compile Include="Models\Items\Offhand.cs" />
+    <Compile Include="Models\Items\Mainhand.cs" />
+    <Compile Include="ViewModels\ContainerViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModel.cs" />
+    <Compile Include="ViewModels\HeroesViewModel.cs" />
+    <Compile Include="ViewModels\ItemsViewModel.cs" />
+    <Compile Include="Views\ContainerView.xaml.cs">
+      <DependentUpon>ContainerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Views\ContainerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -93,5 +117,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
