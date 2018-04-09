@@ -11,7 +11,7 @@ namespace Idler.Models
 
         public float Speed { get; private set; }
         public float Attack { get; private set; }
-        public float Defence { get; private set; }
+        public float Defense { get; private set; }
         public float Health { get; private set; }
 
         public Headwear Headwear { get; private set; }
